@@ -1,0 +1,89 @@
+:root {
+    --color-white: #F5F3F0;
+    --color-black: #000000;
+    --color-gray: #B3B3B3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-black);
+    font-family: "Inter", sans-serif;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        section {
+            flex: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            scroll-snap-align: start;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            .profile-picture {
+                width: 140px;
+                height: 140px;
+                background-color: #0f0f0f;
+                border-radius: 50%;
+                margin-bottom: 20px;
+                background-image: url(../assets/pp.png);
+                background-size: cover;
+                flex: none;
+            }
+
+            h2 {
+                font-size: 28px;
+                font-weight: 550;
+                color: var(--color-white);
+            }
+
+            h1 {
+                font-size: 71px;
+                font-weight: 650;
+                text-align: center;
+                color: var(--color-white);
+            }
+
+            p {
+                font-size: 24px;
+                font-weight: 300;
+                text-align: center;
+                color: var(--color-gray);
+            }
+
+            a {
+                text-decoration: none;
+                background-color: var(--color-white);
+                color: var(--color-black);
+                padding: 18px  24px;
+                border-radius: 30px;
+                font-size: 16px;
+                font-weight: 500;
+                margin-top: 10px;
+            }
+
+            a:hover  {
+                background-color: #dbdbdb;
+            }
+        }
+    }
+}
